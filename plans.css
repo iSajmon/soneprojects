@@ -1,0 +1,194 @@
+@import url(assets/quickCSS/fonts.css);
+@import url(assets/quickCSS/scrollbar.css);
+
+* {
+  transition: all 0.5s;
+}
+
+& /* scrollbar */ {
+    
+  & ::-webkit-scrollbar {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  }
+    & ::-webkit-scrollbar-track {
+      background-color: rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  
+    & ::-webkit-scrollbar-thumb {
+      background-color: white;
+      border-radius: 5px;
+      height: 10px;
+    }
+  
+}
+
+body {
+  font-family: consolas, monospace ;
+   margin-top: 0;
+   background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   
+ }
+
+.s1 {
+  font-weight: bold;
+  font-family: PDARK;
+  color: rgba(0, 0, 0, 0.301);
+}
+
+.backHome {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 20px;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  padding: 5px 20px;
+  transition: scale 0.2s ease-in-out;
+}
+.backHome:active {
+  scale: 0.9;
+  transition: scale 0.2s ease-in-out;
+}
+.backHome:hover {
+  scale: 1.02;
+  transition: scale 0.2s ease-in-out;
+}
+
+.stickyMenu {
+  position: sticky;
+  top: 0px;
+  padding-top: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0px 0px 10px 10px;
+  width: 100%;
+  height: 100px;
+}
+.whatsNew {
+  padding-left: 40px;
+}
+
+.plans {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: fit-content;
+  position: relative;
+  margin-top: 80px;
+}
+
+
+.plansDone {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: fit-content;
+  position: relative;
+  padding-bottom: 20px;
+  
+}
+
+.plan {
+  display: block;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: relative;
+  overflow: hidden;
+  min-width: 550px;
+  width: 48%;
+  padding: 0px 0px 20px 0px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.35);
+  & img {
+    background-color: white;
+    padding: 5px 0px;
+    object-fit: contain;
+    height: 80px;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0px 24px 24px 10px rgba(255, 255, 255, 1);
+  }
+  & .textPart {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  & h1 {
+    color: black;
+  }
+  & p {
+    font-weight: 100;
+    color: gray;
+    font-style: italic;
+    text-align: right;
+  }
+}
+.material-symbols-rounded {
+  color: rgb(100, 192, 39);
+  font-size: 40px !important;
+  margin: 0;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+h3 {
+  align-items: center;
+  display: flex;
+  margin: -5px 0px -15px 0px;
+  padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .backHome {
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .stickyMenu {
+    height: 100px;
+  }
+  .whatsNew {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    padding-left: 0;
+    text-align: center;
+    margin: auto;
+  }
+
+  .plans {
+    margin-top: 130px;
+    justify-content: center;
+  }
+  .plan {
+    min-width: 0;
+    width: 100%;
+    height: fit-content;
+    & p {
+      font-size: 3vw;
+    }
+  }
+}
+@media screen and (max-width: 1510px) {
+  .plans {
+    justify-content: left;
+  }
+  .plan {
+    width: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+* {
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+@font-face {
+    font-family: "Kanit-Ligh";
+    src: url(assets/font/Kanit-Light.ttf);
+  }
+  @font-face {
+    font-family: "PDark";
+    src: url(assets/font/PDARK.TTF);
+  }
+@font-face {
+  font-family: "MPLUS" ;
+  src: url(assets/font/MPLUSRounded1c-Bold.ttf);
+}

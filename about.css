@@ -1,0 +1,63 @@
+@import url(assets/quickCSS/fonts.css);
+@import url(assets/quickCSS/scrollbar.css);
+body {
+    margin: 20px 10px;
+    font-family: mplus;
+    background: rgb(238,174,202);
+    background: linear-gradient(160deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: overlay;
+}
+
+& /* scrollbar */ {
+    
+    & ::-webkit-scrollbar {
+        background: linear-gradient(160deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    }
+      & ::-webkit-scrollbar-track {
+        background-color: #78706000;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    
+      & ::-webkit-scrollbar-thumb {
+        background-color: white;
+        border-radius: 5px;
+        height: 10px;
+      }
+    
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.sone, .me {
+    display: flex;
+    padding: 0px 20px 0px 20px;
+    gap: 20px;
+}
+
+.textBlock {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px;
+    height: 400px;
+    width: fit-content;
+    transition: transform 0.1s ease;
+
+    & h2 {
+        color: transparent;
+       background: linear-gradient(160deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+       background-clip: text;
+    }
+    & p {
+        text-align: justify;
+        font-size: 20px;
+    }
+   
+}
