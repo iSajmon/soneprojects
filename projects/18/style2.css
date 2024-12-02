@@ -1,0 +1,215 @@
+body {
+  background: url(assets/img/background.gif);
+  background-size: cover;
+  margin: 30px;
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+
+.mapa iframe {
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.playlista {
+  width: 100%;
+  align-items: center;
+}
+
+.mapa {
+  float: right;
+}
+
+.c1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.zapraszam {
+  border: 3px solid #d8b038;
+  background-color: white;
+  border-radius: 15px;
+  animation: glowing 2s ease-in-out infinite;
+  border-image: conic-gradient(transpaernt, #d8b038);
+  width: 800px;
+  margin-right: 30px;
+}
+
+@keyframes glowing {
+  0% {
+    border: 2px solid #e0d8d8;
+  }
+  50% {
+    border: 2px solid #d8b038;
+    box-shadow: 0 0 20px #d8b038;
+  }
+  100% {
+    border: 2px solid #e0d8d8;
+  }
+}
+
+.zapraszam p {
+  margin: 25px;
+  font-family: Trebuchet MS;
+  font-size: 30px;
+  text-align: justify;
+  align-items: center;
+  color: #787060;
+}
+.dodaj p {
+  text-align: center;
+  margin-top: 90px;
+  font-size: 20px;
+}
+.wydarzenie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.wydarzenie button {
+  background-color: #d8b038;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 15px;
+  width: 300px;
+  height: 60px;
+}
+
+.wydarzenie button:hover {
+  background-color: #e0d8d8;
+  color: #d8b038;
+}
+
+.wydarzenie:active {
+  transform: scale(0.98);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #787060;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e0d8d8;
+  border-radius: 5px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c2baba;
+}
+
+@media (max-width: 600px) {
+  .zapraszam {
+    height: 100%;
+    width: 200%;
+    margin-right: 1px;
+  }
+
+  .zapraszam p {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .mapa iframe {
+    margin-left: 10px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    height: 100%;
+  }
+
+  .wydarzenie button {
+    width: 80%;
+    margin: 10px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .wydarzenie {
+    margin-top: 10px;
+  }
+  .dodaj p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .playlista iframe {
+    height: 450px;
+  }
+  body {
+    background: url(assets/img/background.gif);
+    background-size: cover;
+    margin: 30px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .zapraszam {
+    width: 60%;
+  }
+}
+
+.lol button {
+  float: right;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+}
+
+.odliczanie {
+  background-color: #282828;
+  height: 100%;
+  border-radius: 15px;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.ct p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Trebuchet MS;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  margin: 10px;
+}
+
+.zacz p {
+  font-family: Trebuchet MS;
+  font-weight: 650;
+  font-size: 35px;
+  text-align: center;
+  color: white;
+  margin: 10px;
+}
+
+.c2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stol embed {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 25px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}

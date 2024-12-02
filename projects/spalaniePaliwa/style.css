@@ -1,0 +1,342 @@
+@font-face {
+    font-family:Mooli;
+    src: url(/assets/font/Mooli-Regular.ttf);
+}
+& /*scrollbar*/ {
+    & ::-webkit-scrollbar {
+      width: 5px;
+      height: 10px;
+    }
+  
+    & ::-webkit-scrollbar-track {
+      background-color: #787060;
+    }
+  
+    & ::-webkit-scrollbar-thumb {
+      background-color: #e0d8d8;
+      border-radius: 5px;
+      height: 10px;
+    }
+  
+    & ::-webkit-scrollbar-thumb:hover {
+      background-color: #c2baba;
+    }
+  }
+body{
+    font-family: Mooli;
+    background: rgb(131, 131, 131);
+    background-image: url(assets/img/istockphoto-983030660-612x612.jpg);
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    margin:0;
+    padding: 0px 7.5% ; 
+    box-sizing: border-box;
+    flex-direction: column;
+    
+
+}
+
+
+main {
+    width: 100%;
+    flex: 1;
+    background-color: #ffffff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+.firstPart {
+    display: flex;
+    text-align: center;
+    
+
+    & .dane {
+        width: 100%;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    & form {
+        position: relative;
+        display: flex;
+        width: 65%;
+        background-color: rgb(255, 255, 255); 
+        /* border-radius: 10px; */
+        padding: 20px;
+        /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+        justify-content: left;
+        padding-bottom: 30px;
+        
+        & table {
+            
+            height: auto;
+            & td {
+                position: relative;
+            }
+        }
+        
+        & input {
+            height: 25px;
+            width: 200px;
+            border-radius: 5px 0px 0px 5px;
+            border: 1.5px solid rgb(172, 172, 172);
+            appearance: none;
+            margin: 0px 0px 0px 0px;
+           
+            
+           
+        }
+        & input[type="checkbox"] {
+            appearance: auto; 
+            width: 20px; 
+            height: 15px;
+            padding: 0;
+            margin: auto;
+            transition: scale 0.5s;
+            scale: 0.9;
+      
+            
+        }
+        & input[type="checkbox"]:checked {
+          accent-color: rgb(25, 25, 26);
+          scale: 1.3;
+          transition: scale 0.5s;
+          
+            
+        }
+        & input[type="checkbox"]:hover {
+            accent-color: rgb(25, 25, 26);
+            transition: scale 0.5s;
+  
+              
+        }
+        & .checkbox {
+            position: absolute;
+            bottom: 10px;
+        }
+        & input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+         margin: 0;
+        }
+        & input:focus {
+            
+            border-color: rgb(48, 48, 49);
+            
+            
+        }
+        
+        & .jednostka {
+            text-align: center;
+            color: azure;
+            background-color: rgb(48, 48, 49);
+            margin: 0;
+            margin-left: -5px;
+            width: 80px;
+            border-radius: 0px 5px 5px 0px ;
+            transition: width 1s ease-in;
+            overflow: hidden;
+            vertical-align: middle;
+            line-height: 28.5px; 
+           
+        }
+        
+        & tr>td:nth-child(2) {
+            /* każda druga komórka w wierszu */
+            padding-left: 30px;
+        }
+        & tr>td>p {
+            text-align: right;
+        }
+        
+    }
+
+    & .przykladyCen {
+        display: grid;
+        grid-template-columns: 70px 70px 70px;
+        justify-content: center;
+        position: absolute;
+        right: 5%;
+        margin: auto;
+
+        gap: 5px;
+        & .przykladCena {
+            background-color: red;
+            width: 70px;
+            height: 70px;
+            color: azure;
+            border-radius: 10px;
+            padding-bottom: 10px;
+            cursor: pointer;
+            transition: scale 0.2s;
+            user-select: none;
+            & h3 {
+                margin-bottom: 10px;
+            }
+            & .miniJednostka {
+                font-size: 8px;
+                
+            }   
+        }
+        & .przykladCena:active {
+            scale: 0.95;
+            transition: scale 0.2s;
+        }
+    }
+    & details {
+        text-align: center;
+        justify-content: center;
+       
+        font-family: consolas;
+        & summary {
+            list-style: none;
+            font-size: 20px;
+            & h3 {
+                border: solid ;
+                width: 40%;
+                margin: auto;
+                margin-top: 25px;
+                border-radius: 20px;
+                
+            }
+            
+        }
+        & p {
+            font-family: consolas;
+            background-color: aliceblue;
+            border-radius: 5px;
+            color: black;
+            width: 200px;
+            position: absolute;
+            padding: 10px;
+            margin-left: -80px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            
+        }
+    }
+    & .resultPart {
+        text-align: center;
+        /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+        margin-left: auto;
+        width: 35%;
+        background-color: rgb(255, 255, 255); 
+        /* border-radius: 10px; */
+        padding: 20px;
+        
+     
+        & button {
+            background-color: rgb(48, 48, 49);
+            border: none;
+            width: 100px;
+            height: 40px;
+            padding: 5px;
+            margin-top: 15px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: azure;
+            cursor: pointer;
+            transition: scale 0.2s;
+        }
+        & button:active {
+            scale: 0.95;
+            transition: scale 0.2s;
+        }
+        & .result {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+        & .pln {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: 0px;
+            font-size: 20px;
+            
+        }
+        & .resultNumber {
+            display: flex;
+            text-align: left;
+            font-size: 30px;
+            overflow: hidden;
+            height: 40px;
+            width: fit-content;
+            position: relative;
+            transition: width 1s ease;
+            & label {
+                position: absolute;
+            }
+            & #cenaObecna {
+                top: 0px;
+                bottom: 0px;
+                transition: all 0.5s ease-in-out;
+            }
+            & #cenaPaliwaWiecej {
+             top: 40px;
+             transition: all 0.5s ease-in-out;
+             
+            }
+            & #cenaPaliwaMniej {
+                top: -40px;
+                transition: all 0.5s ease-in-out;
+                
+            }
+            & #placeholderStop {
+                display: none;
+            }
+        }
+        
+    }
+
+    
+}
+
+.dataPartMobile {
+    display: none;
+}
+
+.dataPart {
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    background-color: rgb(255, 255, 255); 
+    /* border-radius: 10px;
+    margin-top: 20px; */
+
+    & table {
+        border-spacing: 200px 0px;
+        text-align: center;
+    }
+    & .jednostkaTable {
+        color: azure;
+        background-color: rgb(48, 48, 49);
+        padding: 5px;
+        border-radius: 5px;
+        
+    }
+    & .koncoweDane {
+        border: solid 2px rgb(48, 48, 49);
+        padding: 2.5px;
+        padding-right: 5px;
+        margin-right: -10px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    & img {
+        width: 100%;
+        max-width: 200px;
+
+    }
+}
+
+
+
+
+

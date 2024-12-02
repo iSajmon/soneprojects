@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" id="style" media="screen and (min-width: 800px)"/>
+    <link rel="stylesheet" href="styleMobile.css" id="styleMobile" media="screen and (max-width: 800px)"/>
+    <script defer src="script.js"></script>
+    <title>Kalkulator Spalania Paliwa</title>
+</head>
+<body>
+
+
+    <main>
+        
+        <div class="firstPart" id="paliwo">
+        <form>
+            <table>
+                <tr>
+                  
+                    <td><p>Spalanie: &nbsp; </p></td>
+                    <td><div class="dane"><input type="number" id="spalanie"  placeholder="9,5">
+                <p class="jednostka" id="jednostka_spalanie">L/100Km</p></div></td>
+                 
+          
+            </tr>
+            <tr>
+                 <td><p>Dystans: &nbsp; </p></td>
+                <td><div class="dane"><input type="number" id="dystans" placeholder="100">
+                <p class="jednostka" id="jednostka_dystans">Km</p> </div>   </td>
+                
+           
+            </tr>
+            
+           <tr>
+                <td><p>Cena paliwa: &nbsp; </p></td>
+                <td><div class="dane"><input type="number" id="cena" placeholder="6,38">
+                <p class="jednostka" id="jednostka_cena">PLN</p></div> </td>
+           </tr>
+           
+  
+          
+        </table>
+        <div class="checkbox">
+            <input type="checkbox" name="" id=""> Uwzględnij pasażerów
+        </div>
+        
+        
+        
+         <div class="przykladyCen">
+            <div class="przykladCena" style="background-color: rgb(85, 163, 9);" onclick="wybranaCena(6.38)">
+                <h3>95</h3>6,38 <span class="miniJednostka">PLN</span>
+              </div>
+              <div class="przykladCena" style="background-color: rgb(79, 144, 15);" onclick="wybranaCena(7.10)">
+                <h3>98</h3>7,10 <span class="miniJednostka">PLN</span>
+              </div>
+              <div class="przykladCena" style="background-color: rgb(74, 74, 74);" onclick="wybranaCena(6.60)">
+                <h3>ON</h3>6,60 <span class="miniJednostka">PLN</span>
+              </div>
+              <div class="przykladCena" style="background-color: rgb(53, 53, 53);" onclick="wybranaCena(6.80)">
+                <h3>LPG</h3>6,80 <span class="miniJednostka">PLN</span>
+              </div>
+              <div class="przykladCena" style="background-color: rgb(0, 174, 239) ;" onclick="wybranaCena(2.80)">
+                <h3>ON+</h3>2,80 <span class="miniJednostka">PLN</span>
+              </div>
+              <div class="przykladCena" style="background-color: rgb(76, 158, 235);;">
+                <details>
+                    <summary><h3>i</h3></summary>
+                    <p>Dane wprowadzane ręcznie, ostatnia akutalizacja: <br> <label style="font-size: 15px;">14-03-2024 <br> Łódzkie</label> <br> <br>
+                    Sprawdź aktualne ceny na stronie <a href="https://www.autocentrum.pl/paliwa/ceny-paliw/" target="_blank">autocentrum.pl</a></p>
+                </details>
+              </div>
+        </div>
+        </form>
+       
+        <div class="resultPart">
+            <h2>Koszty</h2>
+            <div class="result">
+                <div class="resultNumber">
+                    <label id="cenaWidth" style="position: relative; opacity: 0;">0,00</label>
+                    <label id="cenaObecna" >0,00</label> 
+                    <label id="cenaPaliwaWiecej" class="cenaWynik">0,00</label> 
+                    <label id="cenaPaliwaMniej" class="cenaWynik">0,00</label> 
+                </div>
+                    <label class="pln">PLN</label>
+            </div>
+            <button class="oblicz" onclick="obliczKoszty()">OBLICZ</button>
+        </div>
+    </div>
+    <div class="dataPart">
+        <table>
+            <tr>
+                <th>
+                    <h2>SPALANIE PALIWA</h2>
+                </th>
+                <th>
+                    <h2>DYSTANS</h2>
+                </th>
+                <th>
+                    <h2>CENA PALIWA</h2>
+                </th>
+            </tr>
+            <tr>
+                <td><label id="wprowadzoneSpalanie" class="koncoweDane">0.00</label> <label class="jednostkaTable">L/100Km</label></td>
+                <td><label id="wprowadzoneDystans"class="koncoweDane">0.00</label>  <label class="jednostkaTable">Km</label></td>
+                <td><label id="wprowadzoneCena"class="koncoweDane">6.38</label>  <label class="jednostkaTable">PLN</label></td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/fuelTank.png" alt="fuelTank"></td>
+                <td><img src="assets/img/distance.png" alt="distance"></td>
+                <td><img src="assets/img/price.png" alt="price"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="dataPartMobile">
+        <div>
+            <h2>SPALANIE PALIWA</h2>
+            <label id="wprowadzoneSpalanieMobile" class="koncoweDane">0.00</label> <label class="jednostkaTable">L/100Km</label> <br>
+            <img src="assets/img/fuelTank.png" alt="fuelTank">
+        </div>
+        <div>
+            <h1>________</h1>
+            <h2>DYSTANS</h2>
+            <label id="wprowadzoneDystansMobile"class="koncoweDane">0.00</label>  <label class="jednostkaTable">Km</label> <br>
+            <img src="assets/img/distance.png" alt="distance">
+        </div>
+        <div>
+            <h1>________</h1>
+            <h2>CENA PALIWA</h2>
+            <label id="wprowadzoneCenaMobile"class="koncoweDane">6.38</label>  <label class="jednostkaTable">PLN</label> <br>
+            <img src="assets/img/price.png" alt="price">
+        </div>
+    </div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.film {
+    width: 100%;
+     height: 100%;
+    position: absolute; /* ustawia pozycję kontenera na absolutną, aby można było go wyśrodkować */
+    top: 50%; /* przesuwa górną krawędź kontenera na 50% od góry strony */
+    left: 50%; /* przesuwa lewą krawędź kontenera na 50% od lewej krawędzi strony */
+    transform: translate(-50%, -50%); /* przesuwa kontener w górę i w lewo, aby był wyśrodkowany */
+}
+.film video {
+    width: 100%; 
+    height: 100%; 
+}
